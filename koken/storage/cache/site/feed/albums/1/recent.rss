@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+	<title><![CDATA[Simple Colors: Test]]></title>
+	<link><![CDATA[http://colors.quantxr.com/albums/test/]]></link>
+	<description><![CDATA[Simple Colors: Recent uploads from the Test album]]></description>
+	<generator>http://koken.me</generator>
+	<lastBuildDate>Wed, 21 Sep 2016 14:11:46 +0200</lastBuildDate>
+	<atom:link href="http://colors.quantxr.com/feed/albums/1/recent.rss" rel="self" type="application/rss+xml" />	<image>
+	<url>http://colors.quantxr.com/storage/cache/images/000/001/Cross,medium_large.1474459900.jpg</url>
+	<title><![CDATA[Simple Colors: Test]]></title>
+	<link>http://colors.quantxr.com/albums/test/</link>
+	</image>
+	<item>
+	<title><![CDATA[Cross.jpg]]></title>
+	<link><![CDATA[http://colors.quantxr.com/albums/test/content/cross/]]></link>
+	<guid><![CDATA[http://colors.quantxr.com/albums/test/content/cross/]]></guid>
+	<pubDate>Wed, 21 Sep 2016 14:11:43 +0200</pubDate>
+	<dc:creator><![CDATA[Joaquin Perrone]]></dc:creator>
+	<description><![CDATA[]]></description>
+	<content:encoded><![CDATA[<figure><img alt="Cross.jpg" src="http://colors.quantxr.com/storage/cache/images/000/001/Cross,medium_large.1474459900.jpg" width="800"><figcaption></figcaption></figure>]]></content:encoded>
+	<media:title><![CDATA[Cross.jpg]]></media:title>
+	<media:description><![CDATA[]]></media:description>
+	<media:copyright><![CDATA[© Joaquin Perrone]]></media:copyright>
+	<media:content url="http://colors.quantxr.com/storage/cache/images/000/001/Cross,medium_large.1474459900.jpg" width="800" type="image/jpeg" />
+	<media:thumbnail url="http://colors.quantxr.com/storage/cache/images/000/001/Cross,small.1474459900.jpg" width="100" />
+	<media:credit role="photographer"><![CDATA[Joaquin Perrone]]></media:credit>
+</item>	</channel>
+</rss>
