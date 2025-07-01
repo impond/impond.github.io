@@ -27,38 +27,50 @@ a:hover{text-decoration:none}
 
 /* Menu */
 
-#menubox{
-	position: relative;
-	text-align:center;
-	height:100%!important;
-	margin-top:21.5%;
+#menubox {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	text-align: left;
 	font-size: 3em;
-	font-family:Futura;
+	font-family: Futura;
 	text-transform: uppercase;
 	z-index: 2;
-	overflow:hidden;
 }
 
 #menubox a{color:#464646;text-decoration:none}
 #menubox a:hover{color:#dfdfdf;text-decoration:overline;}
 
-.foot-note{height:10px;margin-top:2em;font-size:0.5em;word-spacing:30px;text-align: center}
-.foot-note ul li{display: inline;}
-.foot-note ul li:hover{opacity:0.4;filter:alpha(opacity=40)}
-.foot-note .icon{height:1em;}
+.foot-note {
+	margin-top: 1em;
+	font-size: 0.5em;
+	text-align: left;
+  }
+  
+  .foot-note ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 10px;
+  }
+  
+  .foot-note ul li {
+	display: inline;
+  }
+  
+  .foot-note ul li:hover {
+	opacity: 0.4;
+  }
+  
+  .foot-note .icon {
+	height: 1em;
+	width: auto;
+	vertical-align: middle;
+  }
 
 @media (max-width: 767px) { 
     .foot-note    {
         word-spacing: 5px !important;
     }
 }
-
-/* worldmap */
-
-.map{text-align:center;color:#606060;overflow:hidden;}
-.map h3{text-transform:uppercase;font-weight:700;font-size:2em;line-height:1.7em}
-.map p{font-size:0.5em;font-family:"ff-tisa-web-pro";}
-.btn-go-back{border:1px solid #ececec;padding:0px 8px 4px;text-decoration:none;display:inline-block;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px}
-.btn-go-back{content:"←";height: 0.5em;text-decoration:none;}
-.btn-go-back:hover{opacity:0.4;filter:alpha(opacity=40)}
-.btn-go-back:before{content:"←"}
