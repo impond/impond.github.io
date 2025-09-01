@@ -11,35 +11,48 @@
 
   <link rel="stylesheet" href="css/main.css" />
 
+  <!-- Typekit (existing) -->
   <script src="//use.typekit.net/ebm8cmm.js"></script>
-  <script>
-    try { Typekit.load(); } catch(e) {}
-  </script>
-
+  <script>try { Typekit.load(); } catch(e) {}</script>
 </head>
 <body>
 
-	<div id="menubox">
-		<p>
-		  I build / acquire / run<br>
-		  <a href="https://www.zvoove.com" target="_blank">software companies</a>.
-		</p>
-	  
-		<div class="foot-note">
-		  <ul class="icon-list">
-			<li>
-			  <a href="mailto:mail@joaquinperrone.com">
-				<img class="icon" src="/images/icons/mail.png" alt="Email icon" />
-			  </a>
-			</li>
-			<li>
-			  <a href="https://www.linkedin.com/in/joaquinperrone/">
-				<img class="icon" src="/images/icons/linkedin-logo.png" alt="LinkedIn icon" />
-			  </a>
-			</li>
-		  </ul>
-		</div>
-	  </div>
+  <div id="menubox">
+    <p>
+      I build / acquire / run<br>
+      <a href="https://www.zvoove.com" target="_blank" rel="noopener">software companies</a>.
+    </p>
+
+    <div class="foot-note">
+      <ul>
+        <!-- Mail -->
+        <li>
+          <a href="mailto:mail@joaquinperrone.com" title="Email Joaquin" aria-label="Email Joaquin">
+            <img class="icon" src="/images/icons/mail.png" alt="Email icon" />
+          </a>
+        </li>
+
+        <!-- LinkedIn -->
+        <li id="linkedin-cta">
+          <a href="https://www.linkedin.com/in/joaquinperrone/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <img class="icon" src="/images/icons/linkedin-logo.png" alt="LinkedIn icon" />
+          </a>
+        </li>
+
+        <!-- Calendar (Noun Project icon) — last -->
+        <li id="calendar-cta">
+          <a
+            href="https://calendar.notion.so/meet/joaquinperrone/2y161u4o1a"
+            title="Book a meeting"
+            aria-label="Book a meeting"
+          >
+            <!-- Put your downloaded Noun Project calendar PNG here -->
+            <img class="icon" src="/images/icons/calendar.png" alt="Calendar icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <div id="container" style="z-index:-1;"></div>
 

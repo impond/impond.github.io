@@ -1,15 +1,11 @@
 *{margin:0;padding:0}
 html,body{height:100%}
 body{
-	color:#acacac;
-	font-family:"ff-tisa-web-pro",  Georgia, Times, "Times New Roman", serif;
-	background-color:#f5f5f5;
-	overflow:hidden;
-	-webkit-transition:background-color 0.2s ease-in-out;
-	-moz-transition:background-color 0.2s ease-in-out;
-	-o-transition:background-color 0.2s ease-in-out;
-	-ms-transition:background-color 0.2s ease-in-out;
-	transition:background-color 0.2s ease-in-out;
+  color:#acacac;
+  font-family:"ff-tisa-web-pro", Georgia, Times, "Times New Roman", serif;
+  background-color:#f5f5f5;
+  overflow:hidden;
+  transition:background-color 0.2s ease-in-out;
 }
 
 body.nightmode{background-color:#0a0a0a;}
@@ -20,57 +16,117 @@ a{color:#464646}
 a:hover{text-decoration:none}
 
 #container{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
-.moon{position:fixed;top:0;left:0;width:1.25rem;height:1.25rem;padding:1rem;cursor:pointer;-webkit-transition:background-color 0.2s ease-in-out;-moz-transition:background-color 0.2s ease-in-out;-o-transition:background-color 0.2s ease-in-out;-ms-transition:background-color 0.2s ease-in-out;transition:background-color 0.2s ease-in-out;}
-.moon:hover{background-color:#0a0a0a;fill:#fff}@media (max-width:1024px){.moon{width:1rem;height:1rem}
-.ribbon{-webkit-transform:scale(.75);-moz-transform:scale(.75);-o-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-o-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}}@media (max-width:640px){.moon{width:1rem;height:1rem}
-.ribbon{-webkit-transform:scale(.5);-moz-transform:scale(.5);-o-transform:scale(.5);-ms-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-o-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}}
+
+.moon{position:fixed;top:0;left:0;width:1.25rem;height:1.25rem;padding:1rem;cursor:pointer;transition:background-color 0.2s ease-in-out;}
+.moon:hover{background-color:#0a0a0a;fill:#fff}
+@media (max-width:1024px){.moon{width:1rem;height:1rem}}
+@media (max-width:640px){.moon{width:1rem;height:1rem}}
 
 /* Menu */
-
-#menubox {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	text-align: left;
-	font-size: 3em;
-	font-family: Futura;
-	text-transform: uppercase;
-	z-index: 2;
+#menubox{
+  position:absolute;
+  top:20px;
+  left:20px;
+  text-align:left;
+  font-size:3em;
+  font-family:Futura;
+  text-transform:uppercase;
+  z-index:2;
 }
 
 #menubox a{color:#464646;text-decoration:none}
 #menubox a:hover{color:#dfdfdf;text-decoration:overline;}
 
-.foot-note {
-	margin-top: 1em;
-	font-size: 0.5em;
-	text-align: left;
-  }
-  
-  .foot-note ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	gap: 10px;
-  }
-  
-  .foot-note ul li {
-	display: inline;
-  }
-  
-  .foot-note ul li:hover {
-	opacity: 0.4;
-  }
-  
-  .foot-note .icon {
-	height: 1em;
-	width: auto;
-	vertical-align: middle;
-  }
+.foot-note{
+  margin-top:1em;
+  font-size:0.5em;
+  text-align:left;
+}
 
-@media (max-width: 767px) { 
-    .foot-note    {
-        word-spacing: 5px !important;
-    }
+.foot-note ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  gap:10px;
+}
+
+.foot-note ul li{display:inline}
+.foot-note ul li:hover{opacity:0.4}
+
+.foot-note .icon{
+  height:1em;
+  width:auto;
+  vertical-align:middle;
+}
+
+@media (max-width:767px){
+  .foot-note{word-spacing:5px !important;}
+}
+
+/* Calendar SVG should visually match PNG icons */
+.foot-note svg.calendar-icon{
+  height:1em;
+  width:1em;
+  display:inline-block;
+  vertical-align:middle;
+  line-height:1;
+}
+.foot-note .calendar-icon *{
+  stroke:#464646;
+  stroke-width:1.6px;
+}
+
+/* === Arrow (separate, non-clickable) === */
+#cta-arrow{
+  position:absolute;      /* You adjust these two values to point at the calendar icon */
+  top:-2.6em;             /* move up/down */
+  left:8.0em;             /* move left/right */
+  pointer-events:none;    /* never clickable */
+}
+
+.loop-arrow{
+  width:6.5em;   /* scale arrow overall */
+  height:auto;
+  overflow:visible;
+}
+
+.loop-arrow path{
+  fill:none;
+  stroke:#111;
+  stroke-width:2.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+/* Optionally hide the arrow on tiny screens */
+@media (max-width:420px){
+  #cta-arrow{display:none;}
+}
+
+/* Normalize icon row vertical alignment */
+.foot-note ul {
+  display: flex;
+  align-items: center;      /* vertically center all items */
+  gap: 10px;
+}
+
+.foot-note ul li {
+  display: flex;            /* each <li> is a flex item container */
+  align-items: center;      /* center the icon inside */
+  line-height: 0;           /* kill baseline wiggle from inline content */
+}
+
+.foot-note ul li a {
+  display: inline-flex;     /* tight clickable box around the icon */
+  align-items: center;
+  line-height: 1;
+}
+
+#linkedin-cta .icon {
+  transform: translateY(-20px); /* try -1px to -3px to taste */
+}
+
+#linkedin-cta {
+  transform: translateY(-20px);   /* try -1px to -4px */
 }
