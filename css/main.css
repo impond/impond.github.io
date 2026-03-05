@@ -45,9 +45,9 @@ a:hover{text-decoration:none}
 .foot-note ul li{display:inline}
 .foot-note ul li:hover{opacity:0.4}
 
-.foot-note .icon{
-  height:1em;
-  width:auto;
+.foot-note i{
+  font-size:0.9em;
+  color:#464646;
   vertical-align:middle;
 }
 
